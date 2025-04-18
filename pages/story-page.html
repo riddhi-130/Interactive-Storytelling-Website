@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Story Weavers</title>
+
+    <!-- ----- Link CSS ----- -->
+    <link rel="stylesheet" href="../css/story-page.css">
+</head>
+
+<body>
+
+    <!-- Theme Toggler -->
+    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+        <span class="icon-sun" style="display: none;">
+            ☀️
+        </span>
+        <span class="icon-moon">
+            🌙
+        </span>
+    </button>
+
+    <!-- Story Container -->
+    <div class="story-container">
+        <div class="question-container">
+            <h3 id="question"></h3>
+        </div>
+        <div>
+            <img id="story-image" src="" alt="Story" />
+            <div class="options">
+                <button id="option1" class="option-button"></button>
+                <button id="option2" class="option-button"></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wrong and Success Popup -->
+    <div id="popup" class="popup hidden"></div>
+
+    <!-- Audio Player -->
+    <div class="audio-player">
+
+        <!-- Play/Pause Button -->
+        <button id="playPauseBtn" aria-label="Play">
+            <svg id="playIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z" />
+            </svg>
+            <svg id="pauseIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                viewBox="0 0 24 24" style="display:none;">
+                <path d="M6 19h4V5H6zm8-14v14h4V5h-4z" />
+            </svg>
+        </button>
+
+        <!-- Volume Control -->
+        <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="1" style="display:none;" />
+
+        <!-- Audio Player -->
+        <audio id="audioPlayer" src="../assets/audio/round.mp3"></audio>
+
+    </div>
+
+
+
+    <!-- ----- Link JS ----- -->
+    <script src="../script/story-page.js"></script>
+    <script src="../script/audio.js"></script>
+    <script src="../script/theme-toggle.js"></script>
+    
+
+</body>
+
+</html>
